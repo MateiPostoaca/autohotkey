@@ -4,7 +4,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 
 ; Caps Lock - Escape
-CapsLock::Escape
+; CapsLock::Escape
 
 ; Remap the Menu key to Right Windows key (Super_R)
 AppsKey::RWin
@@ -53,11 +53,22 @@ AppsKey::RWin
     return
 }
 
+; Super + Shift + w - Open WSL
+#+w::
+{
+    Run, C:\Program Files\Alacritty\alacritty.exe, C:\Users\Matei Poștoacă
+
+    WinWaitActive, ahk_exe alacritty.exe
+
+    Send, wsl{Enter}
+    return
+}
+
 ; Super + Shift + q - Close window
 #+q::Send !{F4}
 
 ; Super + Shift + Enter - Run Alacritty
-#+Enter::Run, C:\Program Files\Alacritty\alacritty.exe, C:\Users\Matei Poștoacă\
+#+Enter::Run, C:\Program Files\Alacritty\alacritty.exe, C:\Users\Matei Poștoacă
 
 ; Super + Alt + Enter - Run Alacritty as Administrator
 #!Enter::Run *RunAs C:\Program Files\Alacritty\alacritty.exe, C:\WINDOWS\system32
@@ -65,6 +76,8 @@ AppsKey::RWin
 ; Super + Shift + f - Run Anki
 #+f::Run, C:\Users\Matei Poștoacă\AppData\Local\Programs\Anki\anki.exe
 
+; Super + Shift + m - Run AIMP
+#+m::Run, C:\Program Files\AIMP\AIMP.exe
 
 ; Super + Shift + d - Run Paint.net
 #+d::Run, C:\Program Files\paint.net\paintdotnet.exe
