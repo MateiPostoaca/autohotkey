@@ -60,7 +60,7 @@ AppsKey::RWin
 
     WinWaitActive, ahk_exe alacritty.exe
 
-    Send, wsl{Enter}
+    Send, wsl ~{Enter}
     return
 }
 
