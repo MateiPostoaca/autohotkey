@@ -64,6 +64,13 @@ AppsKey::RWin
     return
 }
 
+; Super + Alt + a - Open Emacs Org-mode
+#!a::
+{
+    Run, wsl emacs /mnt/d/Documents/Personal/Notes/Index.org,, Hide
+    return
+}
+
 ; Super + Shift + q - Close window
 #+q::Send !{F4}
 
