@@ -67,6 +67,7 @@ AppsKey::RWin
 ; Super + Alt + a - Open Emacs Org-mode
 #!a::
 {
+    ; Run, wsl emacs /mnt/d/Documents/Personal/Notes/Index.org --fullscreen,, Hide
     Run, wsl emacs /mnt/d/Documents/Personal/Notes/Index.org,, Hide
     return
 }
@@ -101,16 +102,18 @@ AppsKey::RWin
 ; Super + Shift + t - Reset todos
 #+t::
 {
-    files := ["C:\Users\Matei Poștoacă\Documents\Notes\Todo\morning.norg", "C:\Users\Matei Poștoacă\Documents\Notes\Todo\midday.norg", "C:\Users\Matei Poștoacă\Documents\Notes\Todo\evening.norg"]
+    filePaths := ["D:\Documents\Personal\Notes\Struct\Morning.org", "D:\Documents\Personal\Notes\Struct\Afternoon.org", "D:\Documents\Personal\Notes\Struct\Evening.org", "D:\Documents\Personal\Notes\Struct\Night.org"]
 
-    for index, file in files {
-        FileRead, content, %file%
+    Loop, % filePaths.MaxIndex()
+    {
+        filePath := filePaths[A_Index]
+        FileRead, fileContent, %filePath%
+        
+        fileContent := RegExReplace(fileContent, "\[(X|-)\]", "[ ]")
+        fileContent := RegExReplace(fileContent, "\[(\d+)/(\d+)\]", "[0/$2]")
 
-        StringReplace, content, content, (x), ( ), All
-        StringReplace, content, content, (-), ( ), All
-
-        FileDelete, %file% ; Delete the original file
-        FileAppend, %content%, %file% ; Write the new content to the file
+        FileDelete, %filePath%  ; Delete the original file
+        FileAppend, %fileContent%, %filePath%  ; Write the modified content back
     }
     return
 }
