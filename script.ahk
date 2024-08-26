@@ -9,28 +9,6 @@ SetWorkingDir %A_ScriptDir%
 ; Remap the Menu key to Right Windows key (Super_R)
 AppsKey::RWin
 
-; Super + Shift + a - Open Neorg index file
-#+a::
-{
-    Run, C:\Program Files\Alacritty\alacritty.exe
-
-    WinWaitActive, ahk_exe alacritty.exe
-
-    Send, nvim -c "Neorg workspace Notes"{Enter}
-    return
-}
-
-; Super + Shift + j - Open new Neorg journal
-#+j::
-{
-    Run, C:\Program Files\Alacritty\alacritty.exe
-
-    WinWaitActive, ahk_exe alacritty.exe
-
-    Send, nvim -c "Neorg journal today"{Enter}
-    return
-}
-
 ; Super + Shift + h - Edit script.ahk
 #+h::
 {
@@ -65,7 +43,7 @@ AppsKey::RWin
 }
 
 ; Super + Alt + a - Open Emacs Org-mode
-#!a::
+#+a::
 {
     ; Run, wsl emacs /mnt/d/Documents/Personal/Notes/Index.org --fullscreen,, Hide
     Run, wsl emacs /mnt/d/Documents/Personal/Notes/Index.org,, Hide
@@ -99,8 +77,8 @@ AppsKey::RWin
 ; Super + Shift + n - Run OneNote
 #+n::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
 
-; Super + Shift + t - Reset todos
-#+t::
+; Super + Alt + a - Reset todos
+#!a::
 {
     filePaths := ["D:\Documents\Personal\Notes\Struct\Morning.org", "D:\Documents\Personal\Notes\Struct\Afternoon.org", "D:\Documents\Personal\Notes\Struct\Evening.org", "D:\Documents\Personal\Notes\Struct\Night.org"]
 
