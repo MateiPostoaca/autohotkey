@@ -86,9 +86,10 @@ AppsKey::RWin
     {
         filePath := filePaths[A_Index]
         FileRead, fileContent, %filePath%
-        
+
         fileContent := RegExReplace(fileContent, "\[(X|-)\]", "[ ]")
         fileContent := RegExReplace(fileContent, "\[(\d+)/(\d+)\]", "[0/$2]")
+        fileContent := StrReplace(fileContent, "DONE", "TODO")
 
         FileDelete, %filePath%  ; Delete the original file
         FileAppend, %fileContent%, %filePath%  ; Write the modified content back
