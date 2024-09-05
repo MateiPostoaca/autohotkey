@@ -74,9 +74,6 @@ AppsKey::RWin
 ; Super + Alt + e - Run Visual Studio Installer
 #!e::Run, C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe
 
-; Super + Shift + n - Run OneNote
-#+n::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
-
 ; Super + Alt + a - Reset todos
 #!a::
 {
