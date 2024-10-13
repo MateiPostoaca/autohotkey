@@ -4,7 +4,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 
 ; Caps Lock - Escape
-; CapsLock::Escape
+CapsLock::Escape
 
 ; Remap the Menu key to Right Windows key (Super_R)
 AppsKey::RWin
@@ -77,7 +77,7 @@ AppsKey::RWin
 ; Super + Alt + a - Reset todos
 #!a::
 {
-    filePaths := ["D:\Documents\Personal\Notes\Struct\Morning.org", "D:\Documents\Personal\Notes\Struct\Afternoon.org", "D:\Documents\Personal\Notes\Struct\Evening.org", "D:\Documents\Personal\Notes\Struct\Night.org"]
+    filePaths := ["D:\Documents\Personal\Notes\Struct\Plans\Morning.org", "D:\Documents\Personal\Notes\Struct\Plans\Afternoon.org", "D:\Documents\Personal\Notes\Struct\Plans\Evening.org", "D:\Documents\Personal\Notes\Struct\Plans\Night.org"]
 
     Loop, % filePaths.MaxIndex()
     {
