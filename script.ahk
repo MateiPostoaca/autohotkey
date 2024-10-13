@@ -4,7 +4,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 
 ; Caps Lock - Escape
-CapsLock::Escape
+; CapsLock::Escape
 
 ; Remap the Menu key to Right Windows key (Super_R)
 AppsKey::RWin
