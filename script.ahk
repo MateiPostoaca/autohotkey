@@ -54,7 +54,7 @@ AppsKey::RWin
 #+q::Send !{F4}
 
 ; Super + Shift + Enter - Run Alacritty
-#+Enter::Run, C:\Program Files\Alacritty\alacritty.exe, C:\Users\Matei Poștoacă
+#+Enter::Run, C:\Program Files\Alacritty\alacritty.exe, C:\Users\Anonymous
 
 ; Super + Alt + Enter - Run Alacritty as Administrator
 #!Enter::Run *RunAs C:\Program Files\Alacritty\alacritty.exe, C:\WINDOWS\system32
