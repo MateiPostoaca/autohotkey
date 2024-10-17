@@ -16,7 +16,7 @@ AppsKey::RWin
 
     WinWaitActive, ahk_exe alacritty.exe
 
-    Send, nvim "C:\Users\Matei Poștoacă\Documents\AutoHotkey\script.ahk"{Enter}
+    Send, nvim "C:\Users\Anonymous\Documents\AutoHotkey\script.ahk"{Enter}
     return
 }
 
@@ -60,7 +60,7 @@ AppsKey::RWin
 #!Enter::Run *RunAs C:\Program Files\Alacritty\alacritty.exe, C:\WINDOWS\system32
 
 ; Super + Shift + f - Run Anki
-#+f::Run, C:\Users\Matei Poștoacă\AppData\Local\Programs\Anki\anki.exe
+#+f::Run, C:\Users\Anonymous\AppData\Local\Programs\Anki\anki.exe
 
 ; Super + Shift + m - Run AIMP
 #+m::Run, C:\Program Files\AIMP\AIMP.exe
