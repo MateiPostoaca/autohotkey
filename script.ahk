@@ -46,7 +46,7 @@ AppsKey::RWin
 #+a::
 {
     ; Run, wsl emacs /mnt/d/Documents/Personal/Notes/Index.org --fullscreen,, Hide
-    Run, wsl emacs /mnt/d/Documents/Personal/Notes/Index.org,, Hide
+    Run, emacs D:\Documents\Personal\Notes\Index.org,, Hide
     return
 }
 
